@@ -42,6 +42,7 @@ INSTALLED_APPS = [
 
     # Local Apps
     "hipogram.core",
+    "hipogram.posts",
     "hipogram.users",
 ]
 
