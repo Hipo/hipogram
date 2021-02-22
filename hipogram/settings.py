@@ -115,6 +115,18 @@ USE_TZ = True
 
 
 # Static files (CSS, JavaScript, Images)
+# ------------------------------------------------------------------------------
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
+STATIC_URL = "/static/"
+# https://docs.djangoproject.com/en/3.1/ref/settings/#std:setting-STATICFILES_DIRS
+STATICFILES_DIRS = [BASE_DIR / "hipogram" / "static"]
 
-STATIC_URL = '/static/'
+# Media files
+# ------------------------------------------------------------------------------
+# https://docs.djangoproject.com/en/3.1/ref/settings/#media-root
+MEDIA_ROOT = BASE_DIR / "hipogram" / "media"
+# https://docs.djangoproject.com/en/3.1/ref/settings/#media-url
+MEDIA_URL = "/media/"
+
+
+
