@@ -37,6 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    # Third Party Apps
+    "crispy_forms",
+
+    # Local Apps
+    "hipogram.core",
+    "hipogram.users",
 ]
 
 MIDDLEWARE = [
@@ -129,4 +135,13 @@ MEDIA_ROOT = BASE_DIR / "hipogram" / "media"
 MEDIA_URL = "/media/"
 
 
+# Auth views
 
+LOGIN_URL = "users:login"
+LOGIN_REDIRECT_URL = "posts:list"
+LOGOUT_REDIRECT_URL = "posts:list"
+
+
+# Crispy Forms
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
