@@ -1,10 +1,8 @@
-from django.views.generic import ListView
+from django.shortcuts import render
 
 from .models import Post
 
 
-class PostListView(ListView):
-    model = Post
-    ordering = "-creation_datetime"
-    context_object_name = "posts"
-    template_name = "post_list.html"
+def post_list_view(request):
+    posts = Post.objects.all().order_by("-creation_datetime")
+    return render(request, "post_list.html", {'posts': posts})
